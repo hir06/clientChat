@@ -1,0 +1,47 @@
+<div class="col-md-12 chat" [ngClass]="{'hideCotact': isHomeVisible == true}">
+  <div class="chat-header clearfix" >
+        <i class="fa fa-arrow-left icon smallScreen" style="padding: 10px;height: 2em;cursor:pointer"
+        (click)="showContact()"></i>
+    <img src="{{user.d.link}}" alt="avatar" />
+    
+    <div class="chat-about">
+      <div class="chat-with">{{user.d.name}}</div>
+      <div class="chat-num-messages">Aloha...!!</div>
+ 
+    </div>
+
+  </div> 
+  <!-- end chat-header -->
+  
+  <div class="chat-history" >
+    <ul> 
+      <li class="clearfix" *ngFor="let m of message">
+        <div class="message-data" [ngClass]="{'align-right': m.seq == 1 }">
+          <span class="message-data-time" >{{m.time}}</span> &nbsp; &nbsp;
+          <span class="message-data-name" *ngIf = "m.seq == 1">Me</span> 
+          <span class="message-data-name" *ngIf = "m.seq != 1">{{user.d.name}}</span>
+          <i class="fa fa-circle online"></i>
+          
+        </div>
+        <div class="message"  [ngClass]="{'float-right other-message': m.seq == 1,'my-message' : m.seq != 1 }">
+         {{m.msg}}
+        </div>
+      </li>
+      
+      
+      
+    </ul>
+    
+  </div> 
+  
+  <div class="chat-message clearfix">
+    <textarea [(ngModel)]="myMsg" placeholder ="Type your message" rows="2" 
+    name="mymsg" (keypress)="getKey($event.keyCode)" autofocus></textarea>
+            
+    
+    
+    <input type="button" class="btn btn-success right" (click)= addMessage() value="Send"/>
+
+  </div> 
+  
+</div> 

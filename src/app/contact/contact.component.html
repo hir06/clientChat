@@ -1,0 +1,57 @@
+<div class="container clearfix col-md-12" [ngClass]="{'hideCotact': isHomeVisible == false}">
+    <div class="header clearfix">
+        <i class="fa fa-weixin icon"></i>
+   
+    
+    
+        <h2 style="display: inline">Chat</h2>
+   
+      
+      
+ 
+   
+
+  </div>
+  <div class="people-list" id="people-list">
+   
+    <div>
+      <li class="clearfix" *ngFor="let d of data" (click)= "SelectUser(d)" style="cursor:pointer">
+        <img src="{{d.link}}" alt="avatar" />
+        <div class="about">
+          <div class="name">{{d.name}}</div>
+          <div class="status">
+            <i class="fa fa-circle online"></i> {{d.status}}
+          </div>
+        </div>
+      </li>
+    </div>
+   
+  </div>
+  
+<!-- end chat -->
+  
+</div> <!-- end container -->
+
+<!-- <script id="message-template" type="text/x-handlebars-template">
+<li class="clearfix">
+  <div class="message-data align-right">
+    <span class="message-data-time" >{{time}}, Today</span> &nbsp; &nbsp;
+    <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
+  </div>
+  <div class="message other-message float-right">
+    {{messageOutput}}
+  </div>
+</li>
+</script>
+
+<script id="message-response-template" type="text/x-handlebars-template">
+<li>
+  <div class="message-data">
+    <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+    <span class="message-data-time">{{time}}, Today</span>
+  </div>
+  <div class="message my-message">
+    {{response}}
+  </div>
+</li>
+</script> -->

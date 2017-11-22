@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-md-3">
+    <app-contact (onSelection) = 'getuser($event)' (x) = 'getHomeVisible($event)' [isHomeVisible]='isHomeVisible'></app-contact>
+  </div>
+  <div class="col-md-9">
+    <app-chat [user] = 'selectedUser' [isHomeVisible] = 'isHomeVisible'  (change)="setHomeVisible($event)"></app-chat>
+  </div>
+  </div>
+

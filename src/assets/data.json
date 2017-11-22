@@ -1,0 +1,30 @@
+[
+    {       "id":1,  
+        "name":"Vincent Porter",
+        "link":"https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01.jpg",
+        "status":"Online"
+    },
+    {   
+        "id":2,
+        "name":"Aiden Chavez",
+        "link":"https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_02.jpg",
+        "status":"Away"
+    },
+    {   "id":3,
+        "name":"Mike Thomas",
+        "link":"https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_03.jpg",
+        "status":"Away"
+    },
+    {
+      "id":4,
+      "name":"Hiral",
+      "link":"https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_04.jpg",
+      "status":"Away"
+  },
+  {
+    "id":5,
+    "name":"Hiral P",
+    "link":"https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_05.jpg",
+    "status":"Away"
+}]
+      
